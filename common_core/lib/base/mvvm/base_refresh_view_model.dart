@@ -48,7 +48,7 @@ abstract class BaseRefreshViewModel<T> extends BaseViewModel {
     if (refresh) {
       currentPageIndex = defPageIndex;
     } else {
-      currentPageIndex++;
+      currentPageIndex+=1;
     }
     requestNetwork(
       Method.get,

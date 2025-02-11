@@ -1,9 +1,11 @@
 import 'dart:ui';
 
+import 'package:common_core/base/mvvm/base_refresh_view_model.dart';
 import 'package:common_core/base/mvvm/base_view_model.dart';
 import 'package:common_core/net/dio_utils.dart';
 import 'package:dio/dio.dart';
 
+import '../entity/home_list_entity.dart';
 import '../generated/json/base/json_convert_content.dart';
 
 class BaseRequestViewModel extends BaseViewModel {
@@ -64,4 +66,18 @@ class BaseRequestViewModel extends BaseViewModel {
     );
   }
 
+}
+
+
+
+class BaseRequestListViewModel<T> extends BaseRefreshViewModel<T> {
+  void getRefreshListData<T>({
+    bool refresh = false,
+    required String url,
+    Function(T)? success,
+  }){
+    getRefreshLoadData(url: url,refresh:refresh,success: (data) {
+      success?.call(JsonConvert.fromJsonAsT<T>(data) as T);
+    });
+  }
 }
