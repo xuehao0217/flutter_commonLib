@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-import '../base/base_page_stateful_widget.dart';
+import '../base/base_stateful_widget.dart';
 
 class WebViewPage extends StatefulWidget {
   static String Url = "url";
@@ -15,7 +15,7 @@ class WebViewPage extends StatefulWidget {
   _WebViewPageState createState() => _WebViewPageState();
 }
 
-class _WebViewPageState extends BasePgaeStatefulWidget<WebViewPage> {
+class _WebViewPageState extends BaseStatefulWidget<WebViewPage> {
   late WebViewController controller;
 
   @override
@@ -30,7 +30,12 @@ class _WebViewPageState extends BasePgaeStatefulWidget<WebViewPage> {
                 // Update loading bar.
               },
               onPageStarted: (String url) {},
-              onPageFinished: (String url) {},
+              onPageFinished: (String url) async {
+                var title =
+                    widget.title.isEmpty
+                        ? widget.title
+                        : await controller.getTitle() ?? "";
+              },
               onHttpError: (HttpResponseError error) {},
               onWebResourceError: (WebResourceError error) {},
               onNavigationRequest: (NavigationRequest request) {
@@ -48,7 +53,6 @@ class _WebViewPageState extends BasePgaeStatefulWidget<WebViewPage> {
   String setTitle() {
     return widget.title;
   }
-
   @override
   Widget buildPageContent(BuildContext context) {
     return WebViewWidget(controller: controller);

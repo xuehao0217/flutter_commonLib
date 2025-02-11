@@ -14,7 +14,7 @@ import '../helpter/status_utils.dart';
 import '../style/theme.dart';
 import '../widget/common_widget.dart';
 
-abstract class BasePageStatelessWidget extends StatelessWidget {
+abstract class BaseStatelessWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     changeStatusBarColor(

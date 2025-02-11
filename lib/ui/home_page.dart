@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:card_swiper/card_swiper.dart';
-import 'package:common_core/base/mvvm/base_stateful_widget.dart';
+import 'package:common_core/base/mvvm/base_vm_stateful_widget.dart';
 import 'package:common_core/helpter/helper.dart';
 import 'package:common_core/helpter/widget_ext_helper.dart';
 import 'package:common_core/style/theme.dart';
@@ -24,7 +24,7 @@ class HomePage extends StatefulWidget {
   State<StatefulWidget> createState() => _HomePage();
 }
 
-class _HomePage extends BaseStatefulWidget<HomePage, HomeViewModel> {
+class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
   @override
   void onPageShow() {
     super.onPageShow();

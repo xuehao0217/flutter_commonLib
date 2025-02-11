@@ -1,16 +1,15 @@
-import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-import '../base_page_stateful_widget.dart';
+import '../base_stateful_widget.dart';
 import 'base_view_abs.dart';
 import 'base_view_model.dart';
 
 
-abstract class BaseStatefulWidget<W extends StatefulWidget,VM extends BaseViewModel> extends BasePgaeStatefulWidget<W> implements AbsBaseView {
+abstract class BaseVMStatefulWidget<W extends StatefulWidget,VM extends BaseViewModel> extends BaseStatefulWidget<W> implements AbsBaseView {
   VM createViewModel();
 
   late VM viewModel;

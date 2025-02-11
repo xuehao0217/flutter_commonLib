@@ -15,7 +15,7 @@ import '../widget/common_widget.dart';
 final RouteObserver<ModalRoute<void>> routeObserver =
     RouteObserver<ModalRoute<void>>();
 
-abstract class BasePgaeStatefulWidget<W extends StatefulWidget> extends State<W>
+abstract class BaseStatefulWidget<W extends StatefulWidget> extends State<W>
     with AutomaticKeepAliveClientMixin, RouteAware {
   @override
   bool get wantKeepAlive =>

@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:card_swiper/card_swiper.dart';
-import 'package:common_core/base/mvvm/base_stateful_widget.dart';
+import 'package:common_core/base/mvvm/base_vm_stateful_widget.dart';
 import 'package:common_core/helpter/widget_ext_helper.dart';
 import 'package:common_core/widget/common_list_view.dart';
 import 'package:common_core/widget/common_widget.dart';
@@ -19,7 +19,7 @@ class RefreshListPage extends StatefulWidget {
 }
 
 class _RefreshListPage
-    extends BaseStatefulWidget<RefreshListPage, RefreshListViewModel> {
+    extends BaseVMStatefulWidget<RefreshListPage, RefreshListViewModel> {
   @override
   void onPageShow() {
     super.onPageShow();

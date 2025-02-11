@@ -1,7 +1,7 @@
 
 import 'dart:io';
 
-import 'package:common_core/base/base_page_stateful_widget.dart';
+import 'package:common_core/base/base_stateful_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 
@@ -12,7 +12,7 @@ class PermissionHandlerWidget extends StatefulWidget {
       _PermissionHandlerWidgetState();
 }
 
-class _PermissionHandlerWidgetState extends BasePgaeStatefulWidget<PermissionHandlerWidget> {
+class _PermissionHandlerWidgetState extends BaseStatefulWidget<PermissionHandlerWidget> {
   @override
   String setTitle()=>"PermissionHandler";
 

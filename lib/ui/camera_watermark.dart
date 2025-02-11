@@ -3,7 +3,7 @@ import 'dart:typed_data';
 import 'dart:ui';
 import 'dart:ui';
 
-import 'package:common_core/base/mvvm/base_stateful_widget.dart';
+import 'package:common_core/base/mvvm/base_vm_stateful_widget.dart';
 import 'package:common_core/helpter/widget_ext_helper.dart';
 import 'package:common_core/widget/common_widget.dart';
 import 'package:flustars/flustars.dart';
@@ -23,7 +23,7 @@ class WatermarkPage extends StatefulWidget {
   State<StatefulWidget> createState() => _WatermarkPage();
 }
 
-class _WatermarkPage extends BaseStatefulWidget<WatermarkPage,WatermarkViewModel> {
+class _WatermarkPage extends BaseVMStatefulWidget<WatermarkPage,WatermarkViewModel> {
   @override
   Widget buildPageContent(BuildContext context) {
     return Obx(() => ListView(

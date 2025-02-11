@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:common_core/base/base_page_stateful_widget.dart';
+import 'package:common_core/base/base_stateful_widget.dart';
 import 'package:common_core/helpter/log_utils.dart';
 import 'package:common_core/net/dio_utils.dart';
 import 'package:common_core/style/theme.dart';
@@ -73,7 +73,7 @@ class MainPage extends StatefulWidget {
   State<StatefulWidget> createState() => _MainPage();
 }
 
-class _MainPage extends BasePgaeStatefulWidget with WidgetsBindingObserver {
+class _MainPage extends BaseStatefulWidget with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();

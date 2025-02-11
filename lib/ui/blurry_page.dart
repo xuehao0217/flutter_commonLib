@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:common_core/base/base_page_stateful_widget.dart';
+import 'package:common_core/base/base_stateful_widget.dart';
 import 'package:common_core/helpter/widget_ext_helper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +15,7 @@ class BlurryPage extends StatefulWidget {
   _BlurryState createState() => _BlurryState();
 }
 
-class _BlurryState extends BasePgaeStatefulWidget<BlurryPage> {
+class _BlurryState extends BaseStatefulWidget<BlurryPage> {
   late AnimationController controller;
   late AnimationController controller1;
   @override

@@ -1,4 +1,4 @@
-import 'package:common_core/base/base_page_stateful_widget.dart';
+import 'package:common_core/base/base_stateful_widget.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flustars/flustars.dart';
 import 'package:flutter/cupertino.dart';
@@ -11,7 +11,7 @@ class MyPage extends StatefulWidget {
   State<StatefulWidget> createState() => _MyPageState();
 }
 
-class _MyPageState extends BasePgaeStatefulWidget<MyPage> {
+class _MyPageState extends BaseStatefulWidget<MyPage> {
   @override
   Color setStatusBarColor() => Colors.deepPurpleAccent;
 

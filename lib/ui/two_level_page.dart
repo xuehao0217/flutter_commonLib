@@ -1,5 +1,5 @@
-import 'package:common_core/base/base_page_stateful_widget.dart';
-import 'package:common_core/base/base_page_stateless_widget.dart';
+import 'package:common_core/base/base_stateful_widget.dart';
+import 'package:common_core/base/base_stateless_widget.dart';
 import 'package:common_core/helpter/widget_ext_helper.dart';
 import 'package:common_core/style/theme.dart';
 import 'package:common_core/widget/common_widget.dart';
@@ -22,7 +22,7 @@ class TwoLevelExample extends StatefulWidget {
   }
 }
 
-class _TwoLevelExampleState extends BasePgaeStatefulWidget<TwoLevelExample> {
+class _TwoLevelExampleState extends BaseStatefulWidget<TwoLevelExample> {
   final RefreshController _refreshController = RefreshController();
 
   @override
@@ -113,7 +113,7 @@ class _TwoLevelExampleState extends BasePgaeStatefulWidget<TwoLevelExample> {
   }
 }
 
-class TwoLevelWidget extends BasePageStatelessWidget {
+class TwoLevelWidget extends BaseStatelessWidget {
   @override
   bool showStatusBar() => false;
 

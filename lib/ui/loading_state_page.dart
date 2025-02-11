@@ -1,6 +1,6 @@
 
 
-import 'package:common_core/base/mvvm/base_stateful_widget.dart';
+import 'package:common_core/base/mvvm/base_vm_stateful_widget.dart';
 import 'package:common_core/helpter/widget_ext_helper.dart';
 import 'package:common_core/widget/common_widget.dart';
 import 'package:common_core/widget/common_widget.dart';
@@ -14,7 +14,7 @@ class LoadingStatePage extends StatefulWidget {
   State<StatefulWidget> createState() => _LoadingState();
 }
 
-class _LoadingState  extends BaseStatefulWidget<LoadingStatePage,LoadingStateViewModel> {
+class _LoadingState  extends BaseVMStatefulWidget<LoadingStatePage,LoadingStateViewModel> {
   @override
   Widget buildPageContent(BuildContext context) {
     return Column(

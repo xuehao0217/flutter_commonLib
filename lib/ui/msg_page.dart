@@ -1,4 +1,4 @@
-import 'package:common_core/base/mvvm/base_stateful_widget.dart';
+import 'package:common_core/base/mvvm/base_vm_stateful_widget.dart';
 import 'package:common_core/widget/tab_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +11,7 @@ class MsgPage extends StatefulWidget {
   State<StatefulWidget> createState() => _MsgPage();
 }
 
-class _MsgPage extends BaseStatefulWidget<MsgPage,HomeViewModel> {
+class _MsgPage extends BaseVMStatefulWidget<MsgPage,HomeViewModel> {
   @override
   String setTitle() => "消息";
 

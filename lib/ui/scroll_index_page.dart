@@ -1,4 +1,4 @@
-import 'package:common_core/base/base_page_stateful_widget.dart';
+import 'package:common_core/base/base_stateful_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
@@ -10,7 +10,7 @@ class ScrollIndexPage extends StatefulWidget {
   State<StatefulWidget> createState() => _ScrollIndexPage();
 }
 
-class _ScrollIndexPage   extends BasePgaeStatefulWidget<ScrollIndexPage>{
+class _ScrollIndexPage   extends BaseStatefulWidget<ScrollIndexPage>{
   ScrollController _scrollController = ScrollController();
 
   @override
