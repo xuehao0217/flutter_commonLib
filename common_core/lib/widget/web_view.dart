@@ -17,7 +17,7 @@ class WebViewPage extends StatefulWidget {
 
 class _WebViewPageState extends BaseStatefulWidget<WebViewPage> {
   late WebViewController controller;
-
+  String _pageTitle = "Loading..."; // 默认标题
   @override
   void initState() {
     super.initState();
@@ -35,6 +35,9 @@ class _WebViewPageState extends BaseStatefulWidget<WebViewPage> {
                     widget.title.isEmpty
                         ? widget.title
                         : await controller.getTitle() ?? "";
+                setState(() {
+                  _pageTitle = title;
+                });
               },
               onHttpError: (HttpResponseError error) {},
               onWebResourceError: (WebResourceError error) {},
@@ -51,8 +54,9 @@ class _WebViewPageState extends BaseStatefulWidget<WebViewPage> {
 
   @override
   String setTitle() {
-    return widget.title;
+    return _pageTitle;
   }
+
   @override
   Widget buildPageContent(BuildContext context) {
     return WebViewWidget(controller: controller);
