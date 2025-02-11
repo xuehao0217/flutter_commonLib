@@ -14,7 +14,7 @@ import 'net.dart';
 String _baseUrl = '';
 List<Interceptor> _interceptors = [
   HeaderInterceptor(),
-  LoggingInterceptor(),
+  // LoggingInterceptor(),
   ChuckerDioInterceptor(),
   TalkerDioLogger(
     settings: const TalkerDioLoggerSettings(
