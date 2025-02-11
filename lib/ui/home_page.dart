@@ -190,7 +190,7 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           width: double.infinity,
           height: 50,
           onPressed: () async {
-            Get2Named(RouterRULConfig.webview, parameters: {WebViewPage.Url:"https://www.baidu.com",WebViewPage.Title:"Title"});
+            Get2Named(RouterRULConfig.webview, parameters: {WebViewPage.Url:"https://www.baidu.com?hideTitle=1",WebViewPage.Title:"Title"});
             // Get2Named(RouterRULConfig.webview,arguments: "https://pub.dev/packages/webview_flutter");
           },
           child: const Text(
