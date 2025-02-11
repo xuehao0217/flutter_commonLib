@@ -58,6 +58,11 @@ class _WebViewPageState extends BaseStatefulWidget<WebViewPage> {
   }
 
   @override
+  bool showTitleBar() {
+    return !(Uri.parse(widget.url).queryParameters['hideTitle'] ?? "").isNotEmpty;
+  }
+
+  @override
   Widget buildPageContent(BuildContext context) {
     return WebViewWidget(controller: controller);
   }
