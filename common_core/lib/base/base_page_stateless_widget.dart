@@ -76,8 +76,4 @@ abstract class BasePageStatelessWidget extends StatelessWidget {
         rightWidget: setRightTitleContent(),
         height: 44,
       );
-
-  void Get2Named(String router) {
-    Get.toNamed(router);
-  }
 }

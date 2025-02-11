@@ -129,9 +129,4 @@ abstract class BasePgaeStatefulWidget<W extends StatefulWidget> extends State<W>
   Widget? setRightTitleContent() => null;
 
   Widget buildPageContent(BuildContext context);
-
-
-  void Get2Named(String router) {
-    Get.toNamed(router);
-  }
 }

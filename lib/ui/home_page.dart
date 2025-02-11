@@ -1,9 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:card_swiper/card_swiper.dart';
 import 'package:common_core/base/mvvm/base_stateful_widget.dart';
+import 'package:common_core/helpter/helper.dart';
 import 'package:common_core/helpter/widget_ext_helper.dart';
 import 'package:common_core/style/theme.dart';
 import 'package:common_core/widget/common_widget.dart';
+import 'package:common_core/widget/web_view.dart';
 import 'package:flustars/flustars.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -177,6 +179,22 @@ class _HomePage extends BaseStatefulWidget<HomePage, HomeViewModel> {
           },
           child: const Text(
             "拍照打水印",
+            style: TextStyle(color: Colors.white, fontSize: 16),
+          ),
+        ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
+
+        CommonButton(
+          elevation: 2,
+          circular: 10,
+          backgroundColor: getThemeData().primaryColor,
+          width: double.infinity,
+          height: 50,
+          onPressed: () async {
+            Get2Named(RouterRULConfig.webview, parameters: {WebViewPage.Url:"https://www.baidu.com",WebViewPage.Title:"Title"});
+            // Get2Named(RouterRULConfig.webview,arguments: "https://pub.dev/packages/webview_flutter");
+          },
+          child: const Text(
+            "WebView",
             style: TextStyle(color: Colors.white, fontSize: 16),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),

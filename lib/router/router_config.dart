@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:common_core/widget/web_view.dart';
 import 'package:flutter_commonlib/main.dart';
 import 'package:flutter_commonlib/ui/msg_page.dart';
 import 'package:get/get.dart';
@@ -36,6 +37,8 @@ class RouterRULConfig {
   static const blurry = "/blurry";
 
   static const single_child_scroll = "/single_child_scroll";
+
+  static const webview = "/webview";
 }
 
 
@@ -53,6 +56,7 @@ final List<GetPage>  pages = [
   GetPage(name: RouterRULConfig.two_level, page: () => TwoLevelExample(), transition: Transition.upToDown,),
   GetPage(name: RouterRULConfig.blurry, page: () => BlurryPage(),transitionDuration: Duration(milliseconds: 1000)),
   GetPage(name: RouterRULConfig.single_child_scroll, page: () => SingleChildScrollViewPage()),
+  GetPage(name: RouterRULConfig.webview, page: () => WebViewPage()),
 ];
 
 
