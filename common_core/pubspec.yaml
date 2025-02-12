@@ -33,6 +33,7 @@ dependencies:
   permission_handler: ^11.3.1     #https://pub-web.flutter-io.cn/packages/permission_handler/example
   device_info_plus: ^11.3.0       #https://pub-web.flutter-io.cn/packages/device_info_plus/example
   #组件
+  custom_refresh_indicator: ^4.0.1 #https://pub.dev/packages/custom_refresh_indicator/install
   easy_refresh: ^3.4.0            #https://pub.dev/packages/easy_refresh/example
   pull_to_refresh: ^2.0.0         #https://github.com/peng8350/flutter_pulltorefresh
   path_provider: ^2.1.5           #https://pub-web.flutter-io.cn/packages/path_provider
