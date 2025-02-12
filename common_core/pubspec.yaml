@@ -33,20 +33,20 @@ dependencies:
   permission_handler: ^11.3.1     #https://pub-web.flutter-io.cn/packages/permission_handler/example
   device_info_plus: ^11.3.0       #https://pub-web.flutter-io.cn/packages/device_info_plus/example
   #组件
-  pull_to_refresh: ^2.0.0        #https://github.com/peng8350/flutter_pulltorefresh
-  path_provider: ^2.1.5          #https://pub-web.flutter-io.cn/packages/path_provider
-  image_picker: ^1.1.2           #https://pub-web.flutter-io.cn/packages/image_picker
-  url_launcher: ^6.3.1           #https://pub-web.flutter-io.cn/packages/url_launcher/install
+  pull_to_refresh: ^2.0.0         #https://github.com/peng8350/flutter_pulltorefresh
+  path_provider: ^2.1.5           #https://pub-web.flutter-io.cn/packages/path_provider
+  image_picker: ^1.1.2            #https://pub-web.flutter-io.cn/packages/image_picker
+  url_launcher: ^6.3.1            #https://pub-web.flutter-io.cn/packages/url_launcher/install
   animate_do: ^4.0.0              #https://pub-web.flutter-io.cn/packages/animate_do
   flutter_animate: ^4.5.2         #https://pub-web.flutter-io.cn/packages/flutter_animate
   card_swiper: ^3.0.1             #https://pub-web.flutter-io.cn/packages/card_swiper/install
-  flutter_constraintlayout: ^1.7.0-stable   #https://github.com/hackware1993/Flutter_ConstraintLayout/blob/master/README_CN.md
+  flutter_constraintlayout: ^1.7.0-stable #https://github.com/hackware1993/Flutter_ConstraintLayout/blob/master/README_CN.md
   #easy_refresh: ^3.4.0           #https://pub.dev/packages/easy_refresh/example
-  extended_sliver: 2.1.3         #https://pub-web.flutter-io.cn/packages/extended_sliver
+  extended_sliver: 2.1.3          #https://pub-web.flutter-io.cn/packages/extended_sliver
   #install_plugin: ^2.1.0
-  photo_view: ^0.15.0            #https://pub-web.flutter-io.cn/packages/photo_view
-  scrollview_observer: ^1.25.1   #https://pub.dev/packages/scrollview_observer
-  # flutter_statusbarcolor_ns: ^0.5.0  #https://pub.dev/packages/flutter_statusbarcolor_ns/example
+  photo_view: ^0.15.0             #https://pub-web.flutter-io.cn/packages/photo_view
+  scrollview_observer: ^1.25.1    #https://pub.dev/packages/scrollview_observer
+  #flutter_statusbarcolor_ns: ^0.5.0  #https://pub.dev/packages/flutter_statusbarcolor_ns/example
   video_player: ^2.7.2
   #https://github.com/OctMon/flutter_easy
   #工具
