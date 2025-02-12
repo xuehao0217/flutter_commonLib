@@ -3,7 +3,6 @@ import 'package:common_core/helpter/widget_ext_helper.dart';
 import 'package:flutter/material.dart';
 
 // https://juejin.cn/post/7293410163751125033
-
 ///四种视图状态
 enum LoadState { State_Success, State_Error, State_Loading, State_Empty }
 
