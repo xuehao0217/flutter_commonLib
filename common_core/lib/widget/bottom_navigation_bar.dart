@@ -9,6 +9,7 @@ class BottomNavigationBarWidget extends StatefulWidget {
   final List<BottomNavigationBarItem> bottomNavigationBarItems;
   final Color selectedItemColor, unselectedItemColor;
   final double selectedFontSize, unselectedFontSize,iconSize;
+  final int initialPage=0;
 
   BottomNavigationBarWidget({
     super.key,
@@ -27,7 +28,7 @@ class _BottomNavigationBarWidget extends State<BottomNavigationBarWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final PageController controller = PageController(initialPage: 0);
+    final PageController controller = PageController(initialPage: widget.initialPage);
     return Scaffold(
         body: PageView(
           physics: const NeverScrollableScrollPhysics(), // 禁用滑动
