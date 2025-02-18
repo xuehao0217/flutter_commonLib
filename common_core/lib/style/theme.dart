@@ -18,9 +18,8 @@ final ThemeData appDarkThemeData = ThemeData(
     // 主要部分背景颜色（导航和tabBar等）
     scaffoldBackgroundColor: Colors.black,
     //Scaffold的背景颜色。典型Material应用程序或应用程序内页面的背景颜色
-    textTheme:
-        TextTheme(displayLarge: TextStyle(color: Colors.yellow, fontSize: 15)),
-    appBarTheme: AppBarTheme(iconTheme: IconThemeData(color: Colors.yellow)));
+    textTheme: TextTheme(bodyMedium: TextStyle(color: Colors.deepOrange)),
+    appBarTheme: AppBarTheme(iconTheme: IconThemeData(color: Colors.deepOrange)));
 
 //创建light ThemeData对象
 final ThemeData appLightThemeData = ThemeData(
@@ -31,8 +30,8 @@ final ThemeData appLightThemeData = ThemeData(
     // 主要部分背景颜色（导航和tabBar等）
     scaffoldBackgroundColor: Colors.white,
     //Scaffold的背景颜色。典型Material应用程序或应用程序内页面的背景颜色
-    textTheme:
-        TextTheme(displayLarge: TextStyle(color: Colors.blue, fontSize: 15)),
+
+    textTheme: TextTheme(bodyMedium: TextStyle(color: Colors.white)),
     appBarTheme: AppBarTheme(iconTheme: IconThemeData(color: Colors.black)));
 
 bool isDarkMode() {
@@ -48,6 +47,7 @@ bool isDarkMode() {
   return Get.isDarkMode || Get.isPlatformDarkMode;
 }
 
+
 ThemeData getThemeData() {
   if (isDarkMode()) {
     return appDarkThemeData;
@@ -55,6 +55,10 @@ ThemeData getThemeData() {
     return appLightThemeData;
   }
 }
+
+
+TextTheme getThemeTextTheme()=>getThemeData().textTheme;
+
 
 
 // return AnnotatedRegion<SystemUiOverlayStyle>(

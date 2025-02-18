@@ -69,9 +69,9 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
             Get.changeThemeMode(
                 Get.isDarkMode ? ThemeMode.light : ThemeMode.dark);
           },
-          child: const Text(
+          child:  Text(
             "主题切换",
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
         CommonButton(
@@ -84,9 +84,9 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
             changeStatusBarColor(
                 color: Colors.orange, iconBrightness: Brightness.dark);
           },
-          child: const Text(
+          child:  Text(
             "修改状态栏颜色",
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
         CommonButton(
@@ -98,9 +98,9 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           onPressed: () {
             Get2Named(RouterRULConfig.list_refensh);
           },
-          child: const Text(
+          child:  Text(
             "ListRefensh 使用",
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
         CommonButton(
@@ -112,9 +112,9 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           onPressed: () {
             // Get2Named(RouterRULConfig.permission);
           },
-          child: const Text(
+          child:  Text(
             "Permission 使用",
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
         CommonButton(
@@ -128,7 +128,7 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           },
           child: Text(
             "二楼使用",
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
         // CommonButton(
@@ -157,9 +157,9 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           onPressed: () {
             Get2Named(RouterRULConfig.single_child_scroll);
           },
-          child: const Text(
+          child: Text(
             "SingleChildScrollViewPage 使用",
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
         CommonButton(
@@ -171,9 +171,9 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           onPressed: () async {
             Get2Named(RouterRULConfig.watermark);
           },
-          child: const Text(
+          child:  Text(
             "拍照打水印",
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
 
@@ -187,9 +187,9 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
             Get2Named(RouterRULConfig.webview, parameters: {WebViewPage.Url:"https://www.baidu.com?hideTitle=1",WebViewPage.Title:"Title"});
             // Get2Named(RouterRULConfig.webview,arguments: "https://pub.dev/packages/webview_flutter");
           },
-          child: const Text(
+          child: Text(
             "WebView",
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
 
@@ -208,9 +208,9 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           onPressed: () async {
             viewModel.showDownloadDialog();
           },
-          child: const Text(
+          child:  Text(
             "版本更新",
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
 
@@ -223,9 +223,9 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           onPressed: () async {
             Get2Named(RouterRULConfig.loading_state);
           },
-          child: const Text(
+          child:  Text(
             "Loading State",
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
 
@@ -238,9 +238,9 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           onPressed: () async {
             Get2Named(RouterRULConfig.scroll_index);
           },
-          child: const Text(
+          child:  Text(
             "监听列表滑动",
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
 
@@ -253,9 +253,9 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           onPressed: () async {
             Get2Named(RouterRULConfig.scrollview_observe);
           },
-          child: const Text(
+          child:  Text(
             "监听列表滑动 ListViewObserver",
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
 
