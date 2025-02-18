@@ -57,13 +57,7 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
   Widget buildPageContent(BuildContext context) {
     return ListView(
       children: [
-        const SizedBox(
-          height: 15,
-        ),
-        ChuckerFlutter.chuckerButton,
-        const SizedBox(
-          height: 15,
-        ),
+        ChuckerFlutter.chuckerButton.intoPadding(EdgeInsets.all(15)),
         CommonButton(
           elevation: 2,
           circular: 10,
