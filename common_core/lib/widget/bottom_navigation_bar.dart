@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../style/theme.dart';
+
 class BottomNavigationBarWidget extends StatefulWidget {
   @override
   _BottomNavigationBarWidget createState() => _BottomNavigationBarWidget();
@@ -49,6 +51,7 @@ class _BottomNavigationBarWidget extends State<BottomNavigationBarWidget> {
             highlightColor: Colors.transparent,
           ),
           child: BottomNavigationBar(
+            backgroundColor: getThemeData().scaffoldBackgroundColor,
             // 当前页面索引
             currentIndex: currentIndex,
             // 设置文字大小
