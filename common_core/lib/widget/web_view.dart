@@ -1,4 +1,8 @@
+import 'dart:ffi';
+
+import 'package:common_core/helpter/widget_ext_helper.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -18,6 +22,7 @@ class WebViewPage extends StatefulWidget {
 class _WebViewPageState extends BaseStatefulWidget<WebViewPage> {
   late WebViewController controller;
   String _pageTitle = "Loading..."; // 默认标题
+  double _progress = 0.0;
   @override
   void initState() {
     super.initState();
@@ -27,7 +32,9 @@ class _WebViewPageState extends BaseStatefulWidget<WebViewPage> {
           ..setNavigationDelegate(
             NavigationDelegate(
               onProgress: (int progress) {
-                // Update loading bar.
+                setState(() {
+                  _progress = progress / 100; // 计算进度值
+                });
               },
               onPageStarted: (String url) {},
               onPageFinished: (String url) async {
@@ -64,6 +71,16 @@ class _WebViewPageState extends BaseStatefulWidget<WebViewPage> {
 
   @override
   Widget buildPageContent(BuildContext context) {
-    return WebViewWidget(controller: controller);
+    return Column(
+      children: [
+        if(_progress<1)
+          LinearProgressIndicator(
+            value: _progress,
+            backgroundColor: Colors.grey[200],  // 进度条的背景颜色
+            valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),  // 进度条的颜色
+          ),
+        WebViewWidget(controller: controller).intoExpanded(),
+      ],
+    );
   }
 }
