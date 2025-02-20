@@ -5,7 +5,6 @@ import 'package:common_utils/common_utils.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'log_utils.dart';
-import 'logger_utils.dart';
 
 // str?.let((data) => {
 // Log.logger.e("let  非空  ${data}")
@@ -62,7 +61,7 @@ extension LetRunApply<T> on T {
 
 extension StringLog on String {
   String? logger() {
-      LoggerUtils.d(this);
+    Log.d(this);
   }
 }
 
