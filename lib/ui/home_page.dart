@@ -50,7 +50,7 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
   var imageList = [
     "https://picx.zhimg.com/v2-3b4fc7e3a1195a081d0259246c38debc_720w.jpg?source=172ae18b",
     "https://static-cse.canva.cn/blob/239388/e1604019539295.jpg",
-    "https://p.upyun.com/demo/webp/jpg/0.jpg"
+    "https://p.upyun.com/demo/webp/jpg/0.jpg",
   ];
 
   @override
@@ -67,11 +67,15 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           onPressed: () {
             //手动切换主题
             Get.changeThemeMode(
-                Get.isDarkMode ? ThemeMode.light : ThemeMode.dark);
+              Get.isDarkMode ? ThemeMode.light : ThemeMode.dark,
+            );
           },
-          child:  Text(
+          child: Text(
             "主题切换",
-            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
+            style: TextStyle(
+              color: getThemeTextTheme().bodyMedium?.color,
+              fontSize: 16,
+            ),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
         CommonButton(
@@ -82,11 +86,16 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           height: 50,
           onPressed: () {
             changeStatusBarColor(
-                color: Colors.orange, iconBrightness: Brightness.dark);
+              color: Colors.orange,
+              iconBrightness: Brightness.dark,
+            );
           },
-          child:  Text(
+          child: Text(
             "修改状态栏颜色",
-            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
+            style: TextStyle(
+              color: getThemeTextTheme().bodyMedium?.color,
+              fontSize: 16,
+            ),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
         CommonButton(
@@ -98,9 +107,12 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           onPressed: () {
             Get2Named(RouterRULConfig.list_refensh);
           },
-          child:  Text(
+          child: Text(
             "ListRefensh 使用",
-            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
+            style: TextStyle(
+              color: getThemeTextTheme().bodyMedium?.color,
+              fontSize: 16,
+            ),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
         CommonButton(
@@ -112,9 +124,12 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           onPressed: () {
             // Get2Named(RouterRULConfig.permission);
           },
-          child:  Text(
+          child: Text(
             "Permission 使用",
-            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
+            style: TextStyle(
+              color: getThemeTextTheme().bodyMedium?.color,
+              fontSize: 16,
+            ),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
         CommonButton(
@@ -128,7 +143,10 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           },
           child: Text(
             "二楼使用",
-            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
+            style: TextStyle(
+              color: getThemeTextTheme().bodyMedium?.color,
+              fontSize: 16,
+            ),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
         // CommonButton(
@@ -159,7 +177,10 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           },
           child: Text(
             "SingleChildScrollViewPage 使用",
-            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
+            style: TextStyle(
+              color: getThemeTextTheme().bodyMedium?.color,
+              fontSize: 16,
+            ),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
         CommonButton(
@@ -171,9 +192,12 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           onPressed: () async {
             Get2Named(RouterRULConfig.watermark);
           },
-          child:  Text(
+          child: Text(
             "拍照打水印",
-            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
+            style: TextStyle(
+              color: getThemeTextTheme().bodyMedium?.color,
+              fontSize: 16,
+            ),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
 
@@ -184,21 +208,23 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           width: double.infinity,
           height: 50,
           onPressed: () async {
-            Get2Named(RouterRULConfig.webview, parameters: {WebViewPage.Url:"https://www.baidu.com?hideTitle=1",WebViewPage.Title:"Title"});
+            Get2Named(
+              RouterRULConfig.webview,
+              parameters: {
+                WebViewPage.Url: "https://www.baidu.com?hideTitle=1",
+                WebViewPage.Title: "Title",
+              },
+            );
             // Get2Named(RouterRULConfig.webview,arguments: "https://pub.dev/packages/webview_flutter");
           },
           child: Text(
             "WebView",
-            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
+            style: TextStyle(
+              color: getThemeTextTheme().bodyMedium?.color,
+              fontSize: 16,
+            ),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
-
-        Hero(
-          tag: "Hero",
-          child: Image.asset(R.assetsIcLogo,width: 200,height: 100,).click(() {
-            Get2Named(RouterRULConfig.blurry);
-          }),
-        ),
         CommonButton(
           elevation: 2,
           circular: 10,
@@ -208,9 +234,12 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           onPressed: () async {
             viewModel.showDownloadDialog();
           },
-          child:  Text(
+          child: Text(
             "版本更新",
-            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
+            style: TextStyle(
+              color: getThemeTextTheme().bodyMedium?.color,
+              fontSize: 16,
+            ),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
 
@@ -223,9 +252,12 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           onPressed: () async {
             Get2Named(RouterRULConfig.loading_state);
           },
-          child:  Text(
+          child: Text(
             "Loading State",
-            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
+            style: TextStyle(
+              color: getThemeTextTheme().bodyMedium?.color,
+              fontSize: 16,
+            ),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
 
@@ -238,9 +270,12 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           onPressed: () async {
             Get2Named(RouterRULConfig.scroll_index);
           },
-          child:  Text(
+          child: Text(
             "监听列表滑动",
-            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
+            style: TextStyle(
+              color: getThemeTextTheme().bodyMedium?.color,
+              fontSize: 16,
+            ),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
 
@@ -253,27 +288,37 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           onPressed: () async {
             Get2Named(RouterRULConfig.scrollview_observe);
           },
-          child:  Text(
+          child: Text(
             "监听列表滑动 ListViewObserver",
-            style: TextStyle(color: getThemeTextTheme().bodyMedium?.color, fontSize: 16),
+            style: TextStyle(
+              color: getThemeTextTheme().bodyMedium?.color,
+              fontSize: 16,
+            ),
           ),
         ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
 
-        Obx(() => CommonButton(
-              elevation: 2,
-              circular: 10,
-              backgroundColor: getThemeData().primaryColor,
-              width: double.infinity,
-              height: 50,
-              onPressed: () async {
-                viewModel.clearCache();
-              },
-              child: Text(
-                "当前缓存 ${viewModel.cacheSize}",
-                style: TextStyle(color: Colors.white, fontSize: 16),
-              ),
-            ).intoPadding(
-                const EdgeInsets.only(bottom: 15, left: 15, right: 15))),
+        Obx(
+          () => CommonButton(
+            elevation: 2,
+            circular: 10,
+            backgroundColor: getThemeData().primaryColor,
+            width: double.infinity,
+            height: 50,
+            onPressed: () async {
+              viewModel.clearCache();
+            },
+            child: Text(
+              "当前缓存 ${viewModel.cacheSize}",
+              style: TextStyle(color: Colors.white, fontSize: 16),
+            ),
+          ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
+        ),
+        Hero(
+          tag: "Hero",
+          child: Image.asset(R.assetsIcLogo, width: 200, height: 100).click(() {
+            Get2Named(RouterRULConfig.blurry);
+          }),
+        ).intoPadding(const EdgeInsets.only(bottom: 15, left: 15, right: 15)),
 
         Swiper(
           viewportFraction: 0.8,
