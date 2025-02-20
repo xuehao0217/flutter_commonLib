@@ -11,13 +11,9 @@ class PermissionHandlerWidget extends StatefulWidget {
   _PermissionHandlerWidgetState createState() =>
       _PermissionHandlerWidgetState();
 }
-
-class _PermissionHandlerWidgetState extends BaseStatefulWidget<PermissionHandlerWidget> {
+class _PermissionHandlerWidgetState extends State<PermissionHandlerWidget> {
   @override
-  String setTitle()=>"PermissionHandler";
-
-  @override
-  Widget buildPageContent(BuildContext context) {
+  Widget build(BuildContext context) {
     return Center(
       child: ListView(
           children: Permission.values
@@ -48,7 +44,8 @@ class _PermissionHandlerWidgetState extends BaseStatefulWidget<PermissionHandler
                   permission != Permission.reminders &&
                   permission != Permission.bluetooth &&
                   permission != Permission.appTrackingTransparency &&
-                  permission != Permission.criticalAlerts;
+                  permission != Permission.criticalAlerts &&
+                  permission != Permission.assistant;
             }
           })
               .map((permission) => PermissionWidget(permission))
@@ -77,6 +74,7 @@ class _PermissionState extends State<PermissionWidget> {
   @override
   void initState() {
     super.initState();
+
     _listenForPermissionStatus();
   }
 
@@ -113,7 +111,7 @@ class _PermissionState extends State<PermissionWidget> {
           ? IconButton(
           icon: const Icon(
             Icons.info,
-            color: Colors.blue,
+            color: Colors.white,
           ),
           onPressed: () {
             checkServiceStatus(
@@ -135,6 +133,7 @@ class _PermissionState extends State<PermissionWidget> {
 
   Future<void> requestPermission(Permission permission) async {
     final status = await permission.request();
+
     setState(() {
       print(status);
       _permissionStatus = status;
