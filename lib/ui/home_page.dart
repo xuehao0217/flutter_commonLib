@@ -122,7 +122,7 @@ class _HomePage extends BaseVMStatefulWidget<HomePage, HomeViewModel> {
           width: double.infinity,
           height: 50,
           onPressed: () {
-            // Get2Named(RouterRULConfig.permission);
+            Get2Named(RouterRULConfig.permission);
           },
           child: Text(
             "Permission 使用",
